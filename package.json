@@ -1,5 +1,13 @@
 {
   "devDependencies": {
-    "lerna": "2.0.0-beta.32"
-  }
+    "lerna": "2.0.0-beta.32",
+    "precommit-hook": "3.0.0"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "./node_modules/.bin/lerna run test"
+  },
+  "pre-commit": [
+    "test"
+  ]
 }
