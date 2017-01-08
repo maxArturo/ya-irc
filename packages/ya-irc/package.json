@@ -1,0 +1,48 @@
+{
+  "name": "ya-irc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "lint": "standard --fix",
+    "bundle": "node_modules/.bin/webpack --config webpack.config.js",
+    "dev": "chokidar 'src/*.js' -c 'npm run test && npm run lint'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "0.17.0",
+    "babel-core": "6.21.0",
+    "babel-loader": "6.2.10",
+    "babel-preset-react": "6.16.0",
+    "babel-register": "6.18.0",
+    "chokidar-cli": "1.2.0",
+    "enzyme": "2.7.0",
+    "precommit-hook": "3.0.0",
+    "react-addons-test-utils": "15.4.2",
+    "react-dom": "15.4.2",
+    "standard": "8.6.0",
+    "webpack": "1.14.0"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
+  },
+  "babel": {
+    "presets": [
+      "node6",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "react": "15.4.2"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ]
+}
